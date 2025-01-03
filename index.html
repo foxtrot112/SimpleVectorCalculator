@@ -1,13 +1,99 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript_LearnDay01</title> 
+      <title>JavaScript_LearnDay01</title> 
+     <link rel="stylesheet" href="style.css">
      <script src="final.js" defer></script>
+
+
+
+      </script>
 </head>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script>
+    /*   
+       let input1A = document.querySelector("input#input1");   
+       let input1B = document.querySelector("input#input2"); 
+       let input1C = document.querySelector("input#input3"); 
+
+        let input2A = document.querySelector("input#inputB1");   
+        let input2B = document.querySelector("input#inputB2"); 
+        let input2C = document.querySelector("input#inputB3"); 
+
+
+       const canvas = document.getElementById('vectorCanvas');
+        // Set up renderer with the canvas
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas });
+        renderer.setSize(500, 500);
+
+        // Scene and Camera
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+        camera.position.set(5, 5, 5);
+        camera.lookAt(0, 0, 0);
+
+        // Axes Helper
+        const axesHelper = new THREE.AxesHelper(5);
+        scene.add(axesHelper);
+
+        // Define vectors
+        const vectorA = new THREE.Vector3(Number(input1A), Number(input1B), Number(input1C)); // Example vector A
+        const vectorB = new THREE.Vector3(Number(input2A), Number(input2B), Number(input2C)); // Example vector B
+        const crossProduct = new THREE.Vector3();
+        crossProduct.crossVectors(vectorA, vectorB);
+
+        // Function to add an arrow
+        function addArrow(vector, color, origin = new THREE.Vector3(0, 0, 0)) {
+            const dir = vector.clone().normalize();
+            const length = vector.length();
+            const arrowHelper = new THREE.ArrowHelper(dir, origin, length, color);
+            scene.add(arrowHelper);
+        }
+
+        // Add arrows for vectors
+        addArrow(vectorA, 0xff0000); // Red for vector A
+        addArrow(vectorB, 0x00ff00); // Green for vector B
+        addArrow(crossProduct, 0x0000ff); // Blue for cross product
+
+        // Render the scene
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Adjust canvas size and camera on resize
+        window.addEventListener('resize', () => {
+            const width = 500;
+            const height = 500;
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        });
+*/
+
+    </script>
+
+
+
+
+
 <body>
- <p id = "application">Hello</p>
+
+
+  <canvas >
+
+  </canvas>
+
+ <p id = "application" >Hi There, More Operations Coming soon.</p>
+
+ <section id = "input">
  <p>First Vector</p>
  <input id = "input1" type="number" style="width: 40px; "> 
  <span>i,</span>
@@ -21,14 +107,88 @@
  <span>i,</span>
  <input id = "inputB2" type="number" style="width: 40px; " > 
  <span>j,</span>
- <input id = "inputB3" type="number" style="width: 40px; " >
+   <input id = "inputB3" type="number" style="width: 40px; " >
  <span>k</span>
- <br> 
- <br>
- <br>
- <br>
- <button id = "dotProduct">DotProduct</button>
- <button id = "crossProduct">CrossProduct</button>
- <button id = "getThetaAngle">GetTheta</button>
+    <br> 
+      <br>
+         <br>
+        </section>
+
+  <div id = "divButton">
+     <button id = "dotProduct" class = "myButton" >DotProduct</button>
+      <button id = "crossProduct" class = "myButton" >CrossProduct</button>
+       <button id = "getThetaAngle" class = "myButton" >GetTheta</button>
+    </div>
+
+<br>
+<br>
+
+<section id = "exp">
+<section id="s1">
+<h1 id = "explaination1" style="font-size: 24px; "> Dot Product (Scalar Product) : </h1>
+<p style="font-size: large;"> The dot product of two vectors gives you a single number (scalar). It's written as a·b and can be calculated in two ways: </p>
+<p id = "documents"> Using magnitudes and angle:
+    a·b = |a| |b| cos(θ)
+    where |a| and |b| are the lengths of the vectors and θ is the angle between them.
+    <br>
+    <br>
+    Using components:
+    If a = (ax, ay, az) and b = (bx, by, bz)
+    Then a·b = ax*bx + ay*by + az*bz
+
+</p>
+</section>
+
+<section id = "s2">
+<h1 id = "explaination2" style="font-size: 24px; "> Cross Product (Vector Product): </h1>
+<p>The cross product a×b gives you a new vector that's perpendicular to both input vectors. Its magnitude is:
+    |a×b| = |a| |b| sin(θ)
+<br>
+<br>
+Using components:
+If a = (ax, ay, az) and b = (bx, by, bz)
+Then a×b = (ay*bz - az*by, az*bx - ax*bz, ax*by - ay*bx)
+</p>
+</section>
+
+<section id = "s3">
+<h1 id = "explaination3"  style="font-size: 24px;"> Finding the Angle Between Vectors : </h1>
+<p style="font-size: large;" >To find the angle between two vectors: 
+ <p id = "documents">   
+   
+   1. Calculate their dot product (a·b)
+   <br>
+   <br>
+   2. Calculate their magnitudes (|a| and |b|)
+   <br>
+   <br>
+   3. Use the formula: θ = arccos((a·b)/(|a||b|))
+</p>
+</section>
+   <br>
+</section>
+<h1 ">
+   Example:
+</h1>
+   If a = (1,0,0) and b = (1,1,0):
+   Dot product = 1*1 + 0*1 + 0*0 = 1
+   |a| = √(1² + 0² + 0²) = 1
+   |b| = √(1² + 1² + 0²) = √2
+   θ = arccos(1/√2) ≈ 45°
+
+</p>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<section id = "cedit">
+<p id = "author">Designed by Mohammed Guerrah</p>
+<p>email: sadekguerrah618@gmail.com</p>
+<p>Feel Free to Contribute git-repository: <a href="https://github.com/foxtrot112/SimpleVectorCalculator/tree/main">https://github.com/foxtrot112/SimpleVectorCalculator/tree/main</a>
+</p>
+</section>
 </body>
 </html>

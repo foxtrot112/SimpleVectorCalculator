@@ -13,7 +13,6 @@ let inputAA = document.querySelector("input#inputB1");
 let inputBB = document.querySelector("input#inputB2"); 
 let inputCC = document.querySelector("input#inputB3"); 
 
-let test = 1.0;
 
 
 
@@ -34,11 +33,6 @@ class vec3 {
         return new vec3(((this.y * other.z)-(this.z*other.y)),((this.z * other.x)-(this.x*other.z)),((this.x * other.y)-(this.y*other.x)));
     }
 }
-
- 
-
-
-
 
  clickDotProductButtom.addEventListener("click" , () => {
      

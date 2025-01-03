@@ -1,0 +1,92 @@
+#application {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: large;
+    font-weight: 600;
+}
+
+body {
+    background-color: hsl(0, 0%, 16%);
+    color: hsl(213, 0%, 98%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+#input {
+    zoom: 110%;
+}
+
+canvas {
+    position: absolute ;
+    right: 10%;
+    top: 20%;
+}
+
+
+
+button {
+    border: none;
+    outline: none;
+  font-size: medium;  
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(59, 59, 59);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button#dotProduct {
+    transition-duration: 0.3s;
+  background-color:hsl(351, 55%, 65%) ;
+}
+button#crossProduct {
+    transition-duration: 0.3s;
+    background-color: hsl(234, 55%, 72%);
+}
+button#getThetaAngle {
+    transition-duration: 0.3s;
+    background-color: hsl(90, 58%, 70%);
+}
+
+#divButton {
+    display:flex;
+    gap: 10px;
+    
+}
+
+#dotProduct:hover , #crossProduct:hover,#getThetaAngle:hover {
+ 
+    scale: 110%;
+    background-color: white;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+h1 {
+    font-weight: 50;
+    text-decoration: underline;
+}
+
+h1#explaination1 {
+    color: hsl(351, 75%, 65%);
+}
+h1#explaination2 {
+    color: hsl(234, 85%, 72%);
+}
+h1#explaination3 {
+    color: hsl(90, 48%, 70%);
+}
+
+
+#s2,#s3 {
+    margin-left: 40px;
+}
+
+#s3 {
+    margin-left: 80px;
+}
+
+section #credit {
+   background-color: aqua;
+}
